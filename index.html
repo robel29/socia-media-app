@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robel Desalegn | Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <script>
+    // Redirect first-time visitors to the welcome/home page
+    if (!sessionStorage.getItem('visited')) {
+      sessionStorage.setItem('visited', 'true');
+      window.location.replace('welcome.html');
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">RD</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="welcome.html" class="nav-link nav-login-btn">Login</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Robel<br /><span>Desalegn</span></h1>
+      <p class="hero-role">
+        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-bio">
+        Passionate about building elegant solutions and turning ideas into impactful digital experiences.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="#" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="avatar-ring">
+        <div class="avatar">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="80" r="40" fill="#6c63ff" opacity="0.8"/>
+            <ellipse cx="100" cy="155" rx="60" ry="35" fill="#6c63ff" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== STATS STRIP ===== -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-image">
+            <div class="about-avatar">
+              <svg viewBox="0 0 200 200" fill="none">
+                <circle cx="100" cy="80" r="45" fill="#6c63ff" opacity="0.85"/>
+                <ellipse cx="100" cy="160" rx="65" ry="38" fill="#6c63ff" opacity="0.65"/>
+              </svg>
+            </div>
+            <div class="experience-badge">
+              <span class="badge-number">3+</span>
+              <span class="badge-text">Years<br>Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>Who am I?</h3>
+          <p>
+            Hi! I'm <strong>Robel Desalegn</strong>, a dedicated software developer with a passion for crafting clean, efficient, and user-friendly applications. I thrive at the intersection of creativity and technology.
+          </p>
+          <p>
+            My journey in tech started with a curiosity for how things work on the web, and it has grown into a full-fledged career building meaningful products. I believe great software is not just functional — it's a joy to use.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring new technologies, contributing to open source, or enjoying a good book.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-label">Name</span>
+              <span class="detail-value">Robel Desalegn</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Amhara Region, Dessie</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Email</span>
+              <span class="detail-value">robeldesalegn172@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Availability</span>
+              <span class="detail-value available">Available for hire</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <p class="section-subtitle">Technologies and tools I work with</p>
+
+      <div class="skills-tabs">
+        <button class="tab-btn active" data-tab="tech">Technical Skills</button>
+        <button class="tab-btn" data-tab="soft">Soft Skills</button>
+      </div>
+
+      <div class="tab-content active" id="tab-tech">
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up">
+            <div class="skill-icon">🌐</div>
+            <h4>HTML & CSS</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            <span class="skill-percent">92%</span>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-delay="100">
+            <div class="skill-icon">⚡</div>
+            <h4>JavaScript</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            <span class="skill-percent">88%</span>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-delay="200">
+            <div class="skill-icon">⚛️</div>
+            <h4>React</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            <span class="skill-percent">82%</span>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-delay="300">
+            <div class="skill-icon">🐍</div>
+            <h4>Python</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            <span class="skill-percent">78%</span>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-delay="400">
+            <div class="skill-icon">🗄️</div>
+            <h4>Node.js</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-card" data-aos="fade-up" data-delay="500">
+            <div class="skill-icon">💾</div>
+            <h4>SQL / MongoDB</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            <span class="skill-percent">72%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-soft">
+        <div class="soft-skills-grid">
+          <div class="soft-skill">
+            <div class="soft-icon">🤝</div>
+            <h4>Teamwork</h4>
+            <p>Collaborative and supportive in team environments</p>
+          </div>
+          <div class="soft-skill">
+            <div class="soft-icon">💡</div>
+            <h4>Problem Solving</h4>
+            <p>Analytical thinker who breaks down complex problems</p>
+          </div>
+          <div class="soft-skill">
+            <div class="soft-icon">🗣️</div>
+            <h4>Communication</h4>
+            <p>Clear and concise communicator, written and verbal</p>
+          </div>
+          <div class="soft-skill">
+            <div class="soft-icon">⏱️</div>
+            <h4>Time Management</h4>
+            <p>Organized with strong focus on meeting deadlines</p>
+          </div>
+          <div class="soft-skill">
+            <div class="soft-icon">🎯</div>
+            <h4>Attention to Detail</h4>
+            <p>Meticulous about quality and user experience</p>
+          </div>
+          <div class="soft-skill">
+            <div class="soft-icon">📚</div>
+            <h4>Continuous Learning</h4>
+            <p>Always exploring new tools and best practices</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <p class="section-subtitle">A selection of things I've built</p>
+
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg,#667eea,#764ba2)">
+              <span>🛒</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="Live demo">🔗 Live</a>
+              <a href="#" class="project-link" aria-label="Source code">💻 Code</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+            <h3>E-Commerce Platform</h3>
+            <p>A full-stack shopping app with authentication, cart management, and payment integration.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg,#f093fb,#f5576c)">
+              <span>📊</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="Live demo">🔗 Live</a>
+              <a href="#" class="project-link" aria-label="Source code">💻 Code</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>JavaScript</span><span>Chart.js</span><span>API</span></div>
+            <h3>Analytics Dashboard</h3>
+            <p>Interactive dashboard with real-time data visualization and custom chart components.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="mobile">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">
+              <span>📱</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="Live demo">🔗 Live</a>
+              <a href="#" class="project-link" aria-label="Source code">💻 Code</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>React Native</span><span>Firebase</span></div>
+            <h3>Task Manager App</h3>
+            <p>Cross-platform mobile app for task tracking with real-time sync and push notifications.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="backend">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg,#43e97b,#38f9d7)">
+              <span>🔌</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="Live demo">🔗 Live</a>
+              <a href="#" class="project-link" aria-label="Source code">💻 Code</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span></div>
+            <h3>REST API Service</h3>
+            <p>Scalable RESTful API with JWT authentication, rate limiting, and full OpenAPI documentation.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg,#fa709a,#fee140)">
+              <span>💬</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="Live demo">🔗 Live</a>
+              <a href="#" class="project-link" aria-label="Source code">💻 Code</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>Socket.io</span><span>React</span><span>Express</span></div>
+            <h3>Real-Time Chat App</h3>
+            <p>WebSocket-powered chat application with rooms, direct messages, and file sharing.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="backend">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg,#a18cd1,#fbc2eb)">
+              <span>🤖</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link" aria-label="Live demo">🔗 Live</a>
+              <a href="#" class="project-link" aria-label="Source code">💻 Code</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span>Python</span><span>ML</span><span>Flask</span></div>
+            <h3>ML Sentiment Analyzer</h3>
+            <p>NLP-powered API that classifies text sentiment with a web interface for live testing.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="section-subtitle">Have a project in mind? Let's work together.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h4>Location</h4>
+            <p>Amhara Region, Dessie</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h4>Email</h4>
+            <p>robeldesalegn172@gmail.com</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h4>Phone</h4>
+            <p>+251 965587039</p>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="social-btn" aria-label="GitHub">GH</a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">IN</a>
+            <a href="#" class="social-btn" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              <span class="form-error" id="email-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project collaboration" required />
+            <span class="form-error" id="subject-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span id="btn-text">Send Message</span>
+            <span id="btn-loader" class="hidden">Sending...</span>
+          </button>
+          <div class="form-success hidden" id="form-success">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Robel Desalegn. Crafted with ❤️</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
